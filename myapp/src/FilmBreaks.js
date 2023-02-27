@@ -1,6 +1,13 @@
 import React, {Component} from "react";
 
-function MovieHeader() {
+
+
+
+
+
+
+
+function MovieList() {
     return (
             <thead>
                 <tr>
@@ -31,23 +38,23 @@ const FilmBreaks = (props) => {
     // use map to iterate over each row and wrap it in
     // a html table row  
     //registered an on click listener to remove the character
-    const rows = props.list.map((row, index) => {
+
+    
+    const rows = props.list.map((row, index, exit) => {
       return (
         <tr key={index}>
           <td>{row.title}</td>
           <td>{row.job}</td>
           <td>{row.actors}</td>
-          {/* <td>{row.plot}</td> 
-             <th>Writer</th>
-             <th>genre</th>
-             <th>genre</th>
-             <th>released</th>
-             <th>runtime</th>
 
-          
-          
-          
+          { /* <td>{row.plot}</td> 
+               <td>{row.writer</td>
+               <td>row.genre</td>
+               <td>row.genre</td>
+               <td>row.released</td>
+               <td>row.runtime</td>
           */} 
+
           <td>{row.imdbRating}</td>
           <td>{row.director}</td>
           <td>{row.year}</td>
@@ -55,8 +62,7 @@ const FilmBreaks = (props) => {
         </tr>
       )
     })
-    //return rows wrapped in tbody
-    return <tbody>{rows}</tbody>
+    return
   }
 
 
@@ -68,7 +74,7 @@ const FilmBreaks = (props) => {
         return(
             <table>
                 <FilmBreaks/>
-                <MovieForm
+
                 list ={movieData}
                 deleteMovie ={deleteMovie}
                 />
@@ -78,11 +84,16 @@ const FilmBreaks = (props) => {
   }
 export default Table;
 
-// Create a Component called MovieForm / FilmBreaks that has the following fields: 
-// -title
-// -actors
-// -plot
-// -imdbRating
-// -director 
-// -year
-// -date added
+/* Creating the Component:
+
+    Create a new functional component called MovieForm
+    Be sure to include props as the first function parameter and be sure to have a single enclosing
+    tag in the JSX of the return statement
+    Add a title to the JSX of the MovieForm component inside the
+    tags
+
+    Movie Form
+    Add as a new component inside of the JSX of the component between the two
+    tags
+    
+    /*
