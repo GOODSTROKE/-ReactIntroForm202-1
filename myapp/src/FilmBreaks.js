@@ -96,4 +96,4 @@ export default Table;
     Add as a new component inside of the JSX of the component between the two
     tags
     
-    /*
+*/
