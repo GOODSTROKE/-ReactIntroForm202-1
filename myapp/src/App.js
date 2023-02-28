@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
+import React, { Component } from 'react'
 import FilmBreaks from './FilmBreaks'
 import table from './table'
 import React, { Component } from 'react'
@@ -480,5 +481,25 @@ removeMovie = { }
   );
 }
 */
+
+addMovie = movie =>{
+  this.setState({movies: [...this.state.movies, movie ]})
+
+} 
+
+render(){
+  return (
+  <div className = "container">
+    <MovieForm addMovie={this.addMovie}/>
+    <Table
+      movieData={this.state.movies} 
+      removeMovie={this.removeMovie}
+    />
+  </div>
+
+
+  )
+}
+} 
 
 export default App;
